@@ -1,0 +1,28 @@
+<div id="echtBioCampaignFrame"></div>
+<script>
+  var _echtbio = _echtbio || [];
+  _echtbio['_baseUrl'] = 'https://echt-biologisch.de/';
+  _echtbio['_apiKey'] = '';
+  _echtbio['_requestUrl'] = encodeURIComponent(window.location.protocol + "//" + window.location.host + window.location.pathname);
+  _echtbio['_pageID'] = '694';
+  _echtbio['_customCss'] = false;
+
+  (function() {
+
+    var hasJQuery = 'function' === typeof jQuery;
+    if(!hasJQuery) {
+      var echtbioJQuery = document.createElement('script');
+      echtbioJQuery.type = 'text/javascript';
+      echtbioJQuery.src = _echtbio['_baseUrl'] + 'custom/extension/shop3/local/echtbiocampaignsnippet/javascript/jquery.js';
+      echtbioJQuery.async = false;
+      document.getElementsByTagName('head')[0].appendChild(echtbioJQuery);
+    }
+
+    var echtbio = document.createElement('script');
+    echtbio.type = 'text/javascript';
+    echtbio.src = _echtbio['_baseUrl'] + 'custom/extension/shop3/local/echtbiocampaignsnippet/javascript/api.js';
+    echtbio.async = false;
+    document.getElementsByTagName('head')[0].appendChild(echtbio);
+
+  })();
+</script>
